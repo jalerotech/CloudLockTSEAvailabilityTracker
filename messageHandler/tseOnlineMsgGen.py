@@ -21,12 +21,12 @@ def genCloudLockTeams_shift_Msg(available_tse, theatre, status):
     try:
         tos_msg_to_send = ""
         if status == "started 🎬":
-            tos_msg_to_send = f"#### 🔔 Cloudlock TSE's on-shift: \n " \
+            tos_msg_to_send = f"#### 🔔 Cloudlock TSE's on-shift _(BETA)_: \n " \
                               f"**{_retTheatreName(theatre)}**: \n " \
                               f"{joined_team_members} \n " \
                               f"\n "
         if status == "ended 🏁":
-            tos_msg_to_send = f"#### 🔕 Cloudlock TSE's off-shift: \n " \
+            tos_msg_to_send = f"#### 🔕 Cloudlock TSE's off-shift _(BETA)_: \n " \
                               f"**{_retTheatreName(theatre)}**: \n " \
                               f"{joined_team_members} \n " \
                               f"\n "
