@@ -5,10 +5,10 @@ import json
 
 
 # # Room IDs:
-# Global WxT space
-# roomId = tqw().Global_TAM_UMB_Queue_watcher
+# CloudLock Support TSEs WxT space
+roomId = cLb().cloudlock_support_TSE_room_id
 # Devs room ID:
-roomId = 'Y2lzY29zcGFyazovL3VzL1JPT00vNWMwY2EzZDAtZjI2ZS0xMWVkLTkwYTUtYjdjMTAyNGFjMDZm'
+# roomId = 'Y2lzY29zcGFyazovL3VzL1JPT00vNWMwY2EzZDAtZjI2ZS0xMWVkLTkwYTUtYjdjMTAyNGFjMDZm'
 
 
 def sendMessageToWxT(data):
