@@ -34,8 +34,7 @@ class ShifttimeData:
         #  === UTC ===				        === CET ===          === Local time ===
         #  APAC: 0100 – 0900 				03:00 - 11:00        11:00 - 19:00  AEDT/AEST
         if self.today != "Saturday" and self.today != "Sunday":
-            # if (self.currentDateAndTime.hour == 3) and (self.currentDateAndTime.minute == 0):
-            if (self.currentDateAndTime.hour == 13) and (self.currentDateAndTime.minute > 45):
+            if (self.currentDateAndTime.hour == 3) and (self.currentDateAndTime.minute == 0):
                 self.logger.info('Getting shift time and status...')
                 shift_data = {
                     "theatre": "TSE_APAC",
