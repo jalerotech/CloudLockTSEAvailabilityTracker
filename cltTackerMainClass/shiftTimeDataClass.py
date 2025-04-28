@@ -67,8 +67,7 @@ class ShifttimeData:
 
             #  === UTC ===				        === CET ===          === Local time ===
             #  NA WEST: 1600 – 0100            18:00 - 03:00        12:00 - 21:00
-            # if (self.currentDateAndTime.hour == 18) and (self.currentDateAndTime.minute == 0):
-            if (self.currentDateAndTime.hour == 10) and (self.currentDateAndTime.minute >= 0):
+            if (self.currentDateAndTime.hour == 18) and (self.currentDateAndTime.minute == 0):
                 self.logger.info('Getting shift time and status...')
                 shift_data = {
                     "theatre": "TSE_US_WEST",

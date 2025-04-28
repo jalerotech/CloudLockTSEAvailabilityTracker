@@ -32,11 +32,11 @@ def alertshiftstart() -> tuple[Any, Any]:
         theatre_label = _retTheatreName(shift_data['theatre'])
         if shift_data['status'] == "started 🎬":
             data = {
-                "text": f"Time is now {shift_data['shift_time']}, {theatre_label} shift is now starting 🎬. _(BETA)_ \n "
+                "text": f"Time is now {shift_data['shift_time']}, {theatre_label} shift is now starting 🎬. \n "
                         f"\n "
                         f"\n "
                         f"Reminder: Please set your CSOne profile to _Available_ for the remainder of your shift.",
-                "markdown": f"**Time is now {shift_data['shift_time']}, {theatre_label} shift is now starting 🎬. _(BETA)_** "
+                "markdown": f"**Time is now {shift_data['shift_time']}, {theatre_label} shift is now starting 🎬.** "
                             f"\n "
                             f"\n "
                         f"**Reminder: Please set your CSOne profile to _Available_ for the remainder of your shift.**"
@@ -47,11 +47,11 @@ def alertshiftstart() -> tuple[Any, Any]:
             return shift_data['theatre'], shift_data['status']
         if shift_data['status'] == "ended 🏁":
             data = {
-                "text": f"Time is now {shift_data['shift_time']}, {theatre_label} shift is now ending 🏁. _(BETA)_ \n "
+                "text": f"Time is now {shift_data['shift_time']}, {theatre_label} shift is now ending 🏁. \n "
                         f"\n "
                         f"\n "
                         f"Reminder: Please set your CSOne profile to _Unavailable_ for the remainder of your shift.",
-                "markdown": f"**Time is now {shift_data['shift_time']}, {theatre_label} shift is now ending 🏁 _(BETA)_.** \n"
+                "markdown": f"**Time is now {shift_data['shift_time']}, {theatre_label} shift is now ending 🏁.** \n"
                             f" \n "
                             f" \n "
                             f"**Reminder: Please set your CSOne profile to _Unavailable_ for the remainder of your shift.**"
