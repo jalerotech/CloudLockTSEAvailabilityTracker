@@ -1,5 +1,5 @@
 from typing import Tuple, Any
-
+from cltTackerMainClass.cLTrackerClass import cLTrackerBlob as cLb
 from cltTackerMainClass.shiftTimeDataClass import ShifttimeData
 import logging
 from messageHandler.msgPoster import sendMessageToWxT
@@ -35,11 +35,13 @@ def alertshiftstart() -> tuple[Any, Any]:
                 "text": f"Time is now {shift_data['shift_time']}, {theatre_label} shift is now starting 🎬. \n "
                         f"\n "
                         f"\n "
-                        f"Reminder: Please set your CSOne profile to _Available_ for the remainder of your shift.",
+                        f"Reminder: Please set your [CSOne profile]({cLb().quickURL}) "
+                        f"to _Available_ for the remainder of your shift.",
                 "markdown": f"**Time is now {shift_data['shift_time']}, {theatre_label} shift is now starting 🎬.** "
                             f"\n "
                             f"\n "
-                        f"**Reminder: Please set your CSOne profile to _Available_ for the remainder of your shift.**"
+                        f"**Reminder: Please set your [CSOne profile]({cLb().quickURL})"
+                            f" to _Available_ for the remainder of your shift.**"
             }
             logger.info(f"{theatre_label} shift {shift_data['status']}.")
             sendMessageToWxT(data)
@@ -50,11 +52,13 @@ def alertshiftstart() -> tuple[Any, Any]:
                 "text": f"Time is now {shift_data['shift_time']}, {theatre_label} shift is now ending 🏁. \n "
                         f"\n "
                         f"\n "
-                        f"Reminder: Please set your CSOne profile to _Unavailable_ for the remainder of your shift.",
+                        f"Reminder: Please set your [CSOne profile]({cLb().quickURL})"
+                        f" to _Unavailable_ for the remainder of your shift.",
                 "markdown": f"**Time is now {shift_data['shift_time']}, {theatre_label} shift is now ending 🏁.** \n"
                             f" \n "
                             f" \n "
-                            f"**Reminder: Please set your CSOne profile to _Unavailable_ for the remainder of your shift.**"
+                            f"**Reminder: Please set your [CSOne profile]({cLb().quickURL}) to _Unavailable_ for the "
+                            f"remainder of your shift.**"
             }
             logger.info(f"{shift_data['theatre']} shift {shift_data['status']}.")
             sendMessageToWxT(data)

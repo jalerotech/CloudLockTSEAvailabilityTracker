@@ -15,6 +15,7 @@ class cLTrackerBlob:
         self.cloudlock_support_TSE_room_id = os.getenv('CloudLock_Support_TSE_room_id')
         self.dev_room_id = os.getenv('dev_room_id')
 
+        self.quickURL = "https://scripts.cisco.com/app/quicker_backlog/#/?tab=Workmon&subTab=My%20Availability"
         # Set the url Webex API Endpoint
         self.webex_api_url = 'https://webexapis.com/v1/messages'
 
